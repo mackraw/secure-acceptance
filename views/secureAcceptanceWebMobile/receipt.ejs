@@ -1,0 +1,10 @@
+<h1>Receipt</h1>
+
+<div class="card border-0">
+    <% for (const [name, value] of Object.entries(params)) { %>
+    <div><span class="fieldName fw-bold"><%= name %>: </span><span class="fieldValue"><%= value %></span></div>
+    <% } %>
+</div>
+
+<a href="/secureAcceptanceWebMobile" class="btn btn-primary my-3 mb-5">Back to Secure Acceptance Web Mobile</a>
+
