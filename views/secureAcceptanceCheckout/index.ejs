@@ -208,8 +208,11 @@
             // append to signed filed names
             signedFieldsElement.value += ',payment_token';
         } else {
-            // Clear the container if a different option is selected
+            // Clear the container and update signed fields list if a different option is selected
             dynamicInputContainer.innerHTML = '';
+            if (signedFieldsElement.value.slice(-14) === ',payment_token') {
+                signedFieldsElement.value = signedFieldsElement.value.slice(0,-14);
+            };
         }
     });
 </script>
